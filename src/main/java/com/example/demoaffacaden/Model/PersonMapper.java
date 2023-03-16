@@ -3,9 +3,7 @@ package com.example.demoaffacaden.Model;
 import com.example.demoaffacaden.Controller.AppStart;
 import com.example.demoaffacaden.Controller.Entitet.Person;
 
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class PersonMapper
 {
@@ -25,7 +23,7 @@ public class PersonMapper
             return null;
         }
 
-        Set<String> stringList = new TreeSet<>(person.getStringSet());
+        List<String> stringList = new ArrayList<>(person.getStringSet());
 
         return new Person(person.getNavn(), person.getKode(), stringList);
 

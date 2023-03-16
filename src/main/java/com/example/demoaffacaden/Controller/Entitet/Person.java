@@ -1,17 +1,15 @@
 package com.example.demoaffacaden.Controller.Entitet;
 
-import java.util.Arrays;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Person
 {
 
 
-    private int id;
+
     private String navn;
     private String kode;
-    Set<String> stringSet;
+    List<String> stringList;
 
     public Person()
     {
@@ -24,24 +22,24 @@ public class Person
 
         String [] strings = s.split(",");
 
-        this.stringSet = new TreeSet<>(Arrays.asList(strings));
+        this.stringList = new ArrayList<>(Arrays.asList(strings));
     }
 
-    public Person(String navn, String kode, Set<String> stringArrayList)
+    public Person(String navn, String kode, List<String> stringArrayList)
     {
         this.navn = navn;
         this.kode = kode;
-        this.stringSet = new TreeSet<>(stringArrayList);
+        this.stringList = new ArrayList<>(stringArrayList);
     }
 
-    public Set<String> getStringSet()
+    public List<String> getStringSet()
     {
-        return stringSet;
+        return stringList;
     }
 
-    public void setStringSet(Set<String> stringSet)
+    public void setStringSet(List<String> stringList)
     {
-        this.stringSet = stringSet;
+        this.stringList = stringList;
     }
 
     public String getNavn()
@@ -64,14 +62,6 @@ public class Person
         this.kode = kode;
     }
 
-    public int getId()
-    {
-        return id;
-    }
 
-    public void setId(int id)
-    {
-        this.id = id;
-    }
 
 }
